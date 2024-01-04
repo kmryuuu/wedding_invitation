@@ -1,21 +1,45 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import galleryBg from '../assets/gallery-bg.jpg';
 import { imgData } from '../assets/imgData';
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
 export default function Gallery() {
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const nextSlide = () => {
-    setCurrentSlide(currentSlide === imgData.length - 1 ? 0 : currentSlide + 1);
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
   };
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? imgData.length - 1 : currentSlide - 1);
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
   };
+
+  const handleTouchEnd = () => {
+    const difference = touchStartX - touchEndX;
+
+    if (difference > 150) {
+      // 왼쪽으로 swipe 하면 다음 슬라이드
+      setCurrentSlide((currentSlide) =>
+        currentSlide === imgData.length - 1 ? 0 : currentSlide + 1
+      );
+    } else if (difference < -150) {
+      // 오른쪽으로 swipe 하면 이전 슬라이드
+      setCurrentSlide((currentSlide) =>
+        currentSlide === 0 ? imgData.length - 1 : currentSlide - 1
+      );
+    }
+  };
+
   return (
     <div>
       <GalleryWrapper>
-        <ImgContainer>
+        <ImgContainer
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {imgData.map((img, index) => (
             <GalleryImg
               key={index}
@@ -26,50 +50,58 @@ export default function Gallery() {
             />
           ))}
         </ImgContainer>
-        <StyledArrowLeft onClick={prevSlide} />
-        <StyledArrowRight onClick={nextSlide} />
+        <IndicatorWrapper>
+          {imgData.map((_, index) => (
+            <IndicatorButton
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              isCurrentSlide={currentSlide === index}
+            />
+          ))}
+        </IndicatorWrapper>
       </GalleryWrapper>
     </div>
   );
 }
 
-export const arrowStyles = css`
-  width: 1.3rem;
-  height: 1.3rem;
-  margin-top: 2rem;
-  color: #5d5d5d;
-  cursor: pointer;
-`;
-
-export const StyledArrowLeft = styled(SlArrowLeft)`
-  ${arrowStyles}
-  left: 5rem;
-`;
-export const StyledArrowRight = styled(SlArrowRight)`
-  ${arrowStyles}
-  right: 5rem;
-`;
-
 export const GalleryWrapper = styled.div`
-  max-width: 520px;
-  overflow: hidden;
+  width: 100%;
+  padding-bottom: 3rem;
   background: url(${galleryBg});
-  background-size: 520px auto;
+  background-size: 100% auto;
 `;
 
 export const ImgContainer = styled.div`
+  cursor: pointer;
+  max-width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  height: 650px;
-  justify-content: center;
-  overflow: hidden;
+  transition: transform 0.2s ease;
 `;
 
 export const GalleryImg = styled.img`
-  width: 520px;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  max-height: 500px;
   object-fit: ${(props) => (props.variSize ? 'contain' : 'cover')};
-  display: ${(props) => (props.isVisible ? 'block' : 'none')};
+  display: ${(props) => (props.isVisible ? 'inline-block' : 'none')};
+`;
+
+export const IndicatorWrapper = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const IndicatorButton = styled.button`
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin: 0 0.2rem;
+  background-color: ${(props) => (props.isCurrentSlide ? '#000' : '#afafaf;')};
 `;
