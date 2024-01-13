@@ -16,6 +16,7 @@ export default function Calender() {
   while (shiftedNumbers.length > 0) {
     rows.push(shiftedNumbers.splice(0, 7));
   }
+
   return (
     <CalenderWrapper>
       <Hr />
@@ -67,6 +68,7 @@ export const HeadText = styled.h2`
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
   color: var(--color-main);
+  text-align: center;
 `;
 
 export const DescText = styled.h3`

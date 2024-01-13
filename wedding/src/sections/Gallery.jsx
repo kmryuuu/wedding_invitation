@@ -20,12 +20,12 @@ export default function Gallery() {
     const difference = touchStartX - touchEndX;
 
     if (difference > 150) {
-      // 왼쪽으로 swipe 하면 다음 슬라이드
+      // 왼쪽으로 swipe하면 다음 슬라이드
       setCurrentSlide((currentSlide) =>
         currentSlide === imgData.length - 1 ? 0 : currentSlide + 1
       );
     } else if (difference < -150) {
-      // 오른쪽으로 swipe 하면 이전 슬라이드
+      // 오른쪽으로 swipe하면 이전 슬라이드
       setCurrentSlide((currentSlide) =>
         currentSlide === 0 ? imgData.length - 1 : currentSlide - 1
       );
@@ -33,34 +33,32 @@ export default function Gallery() {
   };
 
   return (
-    <div>
-      <GalleryWrapper>
-        <ImgContainer
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {imgData.map((img, index) => (
-            <GalleryImg
-              key={index}
-              src={img.src}
-              alt={img.alt}
-              isVisible={currentSlide === index}
-              variSize={img.width > img.height}
-            />
-          ))}
-        </ImgContainer>
-        <IndicatorWrapper>
-          {imgData.map((_, index) => (
-            <IndicatorButton
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              isCurrentSlide={currentSlide === index}
-            />
-          ))}
-        </IndicatorWrapper>
-      </GalleryWrapper>
-    </div>
+    <GalleryWrapper>
+      <ImgContainer
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {imgData.map((img, index) => (
+          <GalleryImg
+            key={index}
+            src={img.src}
+            alt={img.alt}
+            isVisible={currentSlide === index}
+            variSize={img.width > img.height}
+          />
+        ))}
+      </ImgContainer>
+      <IndicatorWrapper>
+        {imgData.map((_, index) => (
+          <IndicatorButton
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            isCurrentSlide={currentSlide === index}
+          />
+        ))}
+      </IndicatorWrapper>
+    </GalleryWrapper>
   );
 }
 
@@ -86,7 +84,7 @@ export const GalleryImg = styled.img`
   width: 100%;
   max-height: 500px;
   object-fit: ${(props) => (props.variSize ? 'contain' : 'cover')};
-  display: ${(props) => (props.isVisible ? 'inline-block' : 'none')};
+  display: ${(props) => (props.isVisible ? 'block' : 'none')};
 `;
 
 export const IndicatorWrapper = styled.span`
