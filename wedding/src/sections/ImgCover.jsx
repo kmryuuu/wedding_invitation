@@ -1,4 +1,4 @@
-import imageCover from '../assets/image-cover.png';
+import imageCover from '../assets/image-cover.jpg';
 import styled from 'styled-components';
 
 export default function MainWrap() {

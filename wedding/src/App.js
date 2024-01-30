@@ -5,6 +5,7 @@ import ImgCover from './sections/ImgCover';
 import Greeting from './sections/Greeting';
 import { imgData } from './assets/imgData';
 import WayToCome from './sections/WayToCome';
+import Contact from './sections/Contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Calender />
       <Gallery imgData={imgData} />
       <WayToCome />
+      <Contact />
     </div>
   );
 }

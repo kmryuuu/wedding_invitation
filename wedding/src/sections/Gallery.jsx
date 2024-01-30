@@ -34,6 +34,7 @@ export default function Gallery() {
 
   return (
     <GalleryWrapper>
+      {/* <HeadText>우리의 순간</HeadText> */}
       <ImgContainer
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -64,20 +65,28 @@ export default function Gallery() {
 
 export const GalleryWrapper = styled.div`
   width: 100%;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   background: url(${galleryBg});
   background-size: 100% auto;
 `;
 
 export const ImgContainer = styled.div`
   cursor: pointer;
-  max-width: 400px;
+  width: 100%;
+  /* max-width: 400px; */
   height: 600px;
   margin: 0 auto;
-  padding: 1rem;
+  /* padding: 1.5rem; */
   display: flex;
   align-items: center;
-  transition: transform 0.2s ease;
+`;
+
+export const HeadText = styled.p`
+  font-size: 1rem;
+  color: #717171;
+  text-align: center;
+  /* margin: 0 0 -1rem 2rem; */
+  letter-spacing: 0.2rem;
 `;
 
 export const GalleryImg = styled.img`

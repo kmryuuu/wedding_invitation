@@ -23,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
 
 * {
   padding: 0;
@@ -40,13 +42,16 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   --color-main: #F56700;
+  --color-second: #5B5E46;
+  --color-third: ##777033;
+  --color-desc-black: #202121;
+  --color-desc-gray: #515151;
 }
 
 body {
   background-color: #f2f2f2;
-  font-family: 'SunBatang-Light';
+  font-family: 'SunBatang-Light', sans-serif;
   height: 100vh;
-  letter-spacing: -0.03rem;
 
 }
 
@@ -66,20 +71,28 @@ body {
     }
   }
 
-  .fadenup {
+  .fadeup {
     position: relative;
-    animation: fadeInUp 1s ease-in-out;
+    animation: fadeInUp 1s ease;
   }
 
+
 }
 
-h1 {
-  font-family: 'SunBatang-Bold';
+a, button {
+  cursor: pointer;
 }
 
-h3 {
-  font-family: 'SunBatang-Medium';
+h1, h2, h3, a {
+  font-family: 'SunBatang-Medium', sans-serif;
 }
+
+span {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
   `;
 
 export default GlobalStyle;

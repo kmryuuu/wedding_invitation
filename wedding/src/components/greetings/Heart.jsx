@@ -13,7 +13,7 @@ export default function Heart() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 9.0,
+        duration: 8.0,
       },
     },
   };
@@ -44,12 +44,12 @@ export default function Heart() {
 
 const SvgWrapper = styled.div`
   position: absolute;
-  top: 49rem;
+  top: 16rem;
   width: 100%;
   max-width: 520px;
 
   @media (max-width: 300px) {
-    top: 49rem;
+    top: 16rem;
     max-width: 30rem;
   }
 `;

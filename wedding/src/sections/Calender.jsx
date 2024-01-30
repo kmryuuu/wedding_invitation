@@ -19,14 +19,8 @@ export default function Calender() {
 
   return (
     <CalenderWrapper>
-      <Hr />
-      <HeadText>예식안내</HeadText>
-      <DescText>
-        2024. 4. 28 일요일 오후 12:30 <br />
-        트라디노이
-      </DescText>
       <CalenderContainer>
-        <Month>4월</Month>
+        <Month>2024. 04. 28</Month>
         <Table>
           <thead>
             <tr>
@@ -45,6 +39,8 @@ export default function Calender() {
             ))}
           </tbody>
         </Table>
+        <Hr />
+        <DescText>2024. 4. 28 일요일 오후 12:30</DescText>
       </CalenderContainer>
     </CalenderWrapper>
   );
@@ -59,9 +55,9 @@ export const CalenderWrapper = styled.div`
 `;
 
 export const Hr = styled.hr`
-  width: 8rem;
-  height: 1px;
-  background-color: #ccc;
+  width: 100%;
+  border-bottom: 1px dashed #dee3d9;
+  padding-top: 2rem;
 `;
 
 export const HeadText = styled.h2`
@@ -71,26 +67,27 @@ export const HeadText = styled.h2`
   text-align: center;
 `;
 
-export const DescText = styled.h3`
+export const DescText = styled.p`
   font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
   line-height: 2rem;
+  color: var(--color-second);
+  padding-top: 2.5rem;
 `;
 
 export const CalenderContainer = styled.div`
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffdf8;
+  background-color: #fdfcf8;
 `;
 
 export const Month = styled.p`
-  color: #515151;
+  color: var(--color-second);
   font-size: 1.3rem;
-  margin-left: -16rem;
   margin-bottom: 2rem;
 `;
 
@@ -106,10 +103,13 @@ export const Table = styled.table`
     text-align: center;
   }
 
-  th:first-child,
+  th {
+    color: #acaf98;
+  }
+  /* th:first-child,
   td:first-child {
     color: #afafaf;
-  }
+  } */
 
   tr:nth-child(5) td:nth-child(1) {
     color: #fff;
