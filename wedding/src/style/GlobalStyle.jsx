@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   font: inherit;
 
   @media (max-width: 300px) {
-   font-size: 13px;
+   font-size: 10px;
   }
 }
 
@@ -81,6 +81,8 @@ body {
 
 a, button {
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 h1, h2, h3, a {

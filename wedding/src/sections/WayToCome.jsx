@@ -216,9 +216,9 @@ export const Location = styled.p`
 `;
 
 export const NoticeContainer = styled.div`
-  width: 20rem;
-  margin-top: 2rem;
+  width: 100%;
   text-align: center;
+  padding: 2rem 2rem 0 2rem;
 `;
 export const NoticeText = styled.p`
   font-size: 0.8rem;

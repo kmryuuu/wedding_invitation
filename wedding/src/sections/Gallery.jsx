@@ -65,7 +65,6 @@ export default function Gallery() {
 
 export const GalleryWrapper = styled.div`
   width: 100%;
-  padding: 3rem 0;
   background: url(${galleryBg});
   background-size: 100% auto;
 `;
@@ -76,7 +75,7 @@ export const ImgContainer = styled.div`
   /* max-width: 400px; */
   height: 600px;
   margin: 0 auto;
-  /* padding: 1.5rem; */
+  padding: 1.5rem;
   display: flex;
   align-items: center;
 `;
@@ -100,6 +99,7 @@ export const IndicatorWrapper = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3.2rem;
 `;
 
 export const IndicatorButton = styled.button`

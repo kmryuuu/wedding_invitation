@@ -1,15 +1,16 @@
-import imageCover from '../assets/image-cover.jpg';
+import React from 'react';
 import styled from 'styled-components';
+import imageCover from '../assets/image-cover.jpg';
 
-export default function MainWrap() {
+export default function ImgCover() {
   return (
     <>
-      <ImgCover src={imageCover} alt="최상단 이미지" />
+      <Cover src={imageCover} alt="최상단 이미지" />
     </>
   );
 }
 
-const ImgCover = styled.img`
+export const Cover = styled.img`
   vertical-align: bottom;
   width: 100%;
 `;
