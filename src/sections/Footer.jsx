@@ -6,7 +6,6 @@ import logoGithub from '../assets/github.png';
 
 export default function Footer() {
   const kakaoButton = () => {
-    const kakaoImage = '/gallery/gallery-13.jpg';
     const KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
 
     if (window.Kakao) {
@@ -21,7 +20,8 @@ export default function Footer() {
         content: {
           title: '상성 & 경민 결혼합니다 ❤︎',
           description: '2024. 04. 28 (일) 오후 12:00, 트라디노이',
-          imageUrl: kakaoImage,
+          imageUrl:
+            'https://github.com/kmryuuu/wedding_invitation/assets/138556024/cec68053-5135-4be8-af4d-146324befe83',
           link: {
             mobileWebUrl: 'https://wedding-mo.netlify.app/',
             webUrl: 'https://wedding-mo.netlify.app/',
