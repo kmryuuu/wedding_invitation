@@ -23,16 +23,16 @@ export default function Footer() {
           description: '2024. 04. 28 일요일 오후 12:00',
           imageUrl: kakaoImage,
           link: {
-            mobileWebUrl: 'http://localhost:3000',
-            webUrl: 'http://localhost:3000',
+            mobileWebUrl: 'https://wedding-mo.netlify.app/',
+            webUrl: 'https://wedding-mo.netlify.app/',
           },
         },
         buttons: [
           {
             title: '청첩장 보러가기',
             link: {
-              mobileWebUrl: 'http://localhost:3000',
-              webUrl: 'http://localhost:3000',
+              mobileWebUrl: 'https://wedding-mo.netlify.app/',
+              webUrl: 'https://wedding-mo.netlify.app/',
             },
           },
         ],
