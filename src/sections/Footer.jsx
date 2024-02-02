@@ -20,7 +20,7 @@ export default function Footer() {
         objectType: 'feed',
         content: {
           title: '상성 & 경민 결혼합니다',
-          description: '2024. 04. 28 일요일 오후 12:00',
+          description: '2024. 04. 28 (일) 오후 12:00 / 트라디노이',
           imageUrl: kakaoImage,
           link: {
             mobileWebUrl: 'https://wedding-mo.netlify.app/',
