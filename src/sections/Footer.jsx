@@ -21,7 +21,7 @@ export default function Footer() {
           title: '상성 & 경민 결혼합니다 ❤︎',
           description: '2024. 04. 28 (일) 오후 12:00, 트라디노이',
           imageUrl:
-            'https://github.com/kmryuuu/wedding_invitation/assets/138556024/cec68053-5135-4be8-af4d-146324befe83',
+            'https://wedding-mo.netlify.app/static/media/image-footer.5b401aba266fe127f5f9.jpg',
           link: {
             mobileWebUrl: 'https://wedding-mo.netlify.app/',
             webUrl: 'https://wedding-mo.netlify.app/',
