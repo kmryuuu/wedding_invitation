@@ -6,7 +6,7 @@ import logoGithub from '../assets/github.png';
 
 export default function Footer() {
   const kakaoButton = () => {
-    const kakaoImage = process.env.PUBLIC_URL + '/gallery/gallery-13.jpg';
+    const kakaoImage = '/gallery/gallery-13.jpg';
     const KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
 
     if (window.Kakao) {
@@ -19,8 +19,8 @@ export default function Footer() {
       kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '상성 & 경민 결혼합니다',
-          description: '2024. 04. 28 (일) 오후 12:00 / 트라디노이',
+          title: '상성 & 경민 결혼합니다 ❤︎',
+          description: '2024. 04. 28 (일) 오후 12:00, 트라디노이',
           imageUrl: kakaoImage,
           link: {
             mobileWebUrl: 'https://wedding-mo.netlify.app/',
