@@ -19,7 +19,7 @@ export default function Footer() {
         objectType: 'feed',
         content: {
           title: '상성 & 경민 결혼합니다 ❤︎',
-          description: '2024. 04. 28 (일) 오후 12:00, 트라디노이',
+          description: '2024. 04. 28 (일) 오후 12:00',
           imageUrl:
             'https://github.com/kmryuuu/wedding_invitation/assets/138556024/cec68053-5135-4be8-af4d-146324befe83',
           link: {

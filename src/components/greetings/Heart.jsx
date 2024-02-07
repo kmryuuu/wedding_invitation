@@ -13,7 +13,7 @@ export default function Heart() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 8.0,
+        duration: 10.0,
       },
     },
   };
