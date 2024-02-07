@@ -2,16 +2,16 @@ export const groomData = [
   {
     modifier: '어머니',
     name: '권남행',
-    bank: '국민은행 ',
-    account: '1234-567-890123',
-    payUrl: 'https://qr.kakaopay.com/FEi3Gomyq',
+    bank: '농협은행 ',
+    account: '302-1245-6719-71',
+    payUrl: 'https://qr.kakaopay.com/FX8mO24CA',
   },
   {
     modifier: '신랑',
     name: '이상성',
-    bank: '국민은행 ',
-    account: '1234-567-890123',
-    payUrl: 'https://qr.kakaopay.com/FEi3Gomyq',
+    bank: '하나은행 ',
+    account: '620242876381',
+    payUrl: 'https://qr.kakaopay.com/Ej8yzaCGq',
   },
 ];
 
@@ -21,14 +21,14 @@ export const brideData = [
     name: '류중현',
     bank: '우리은행',
     account: '1002-129-861789',
-    payUrl: 'https://qr.kakaopay.com/Ej9Btntk7',
+    payUrl: 'https://qr.kakaopay.com/FdpVJmDUp7',
   },
   {
     modifier: '어머니',
     name: '이효숙',
     bank: '기업은행',
-    account: '0114465866',
-    payUrl: 'https://qr.kakaopay.com/FEi3Gomyq',
+    account: '011-446-5866',
+    payUrl: 'https://qr.kakaopay.com/Ej9Btntk7',
   },
   {
     modifier: '신부',
