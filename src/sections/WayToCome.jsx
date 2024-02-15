@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
-import useKakaoLoader from '../hook/useKakaoLoader';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import logoKakaoMap from '../assets/kakao-map.png';
 import logoNaverMap from '../assets/naver-map.png';
@@ -11,8 +10,6 @@ import logoTmap from '../assets/tmap.png';
 import { Hr } from './Calender';
 
 export default function WayToCome() {
-  useKakaoLoader();
-
   const TOAST = {
     position: toast.POSITION.BOTTOM_CENTER,
     autoClose: 1000,
