@@ -40,7 +40,7 @@ export default function Calender() {
           </tbody>
         </Table>
         <Hr />
-        <DescText>2024. 4. 28 일요일 오후 12:30</DescText>
+        <DescText>2024. 4. 28 일요일 오후 12:00</DescText>
       </CalenderContainer>
     </CalenderWrapper>
   );
