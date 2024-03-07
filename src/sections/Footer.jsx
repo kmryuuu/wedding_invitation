@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import imgFooter from '../assets/image-footer.jpg';
 import logoKaKao from '../assets/kakaotalk.png';
-// import logoGithub from '../assets/github.png';
 
 export default function Footer() {
   const kakaoButton = () => {
@@ -50,10 +49,6 @@ export default function Footer() {
           <KakaoLogo src={logoKaKao} />
           카카오톡 공유하기
         </ShareButton>
-        {/* <a href="https://github.com/kmryuuu">
-          <GithubLogo src={logoGithub} />
-          created by kmryuuu
-        </a> */}
       </FooterContainer>
     </>
   );

@@ -2,37 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 import introImage from '../assets/image-greeting.png';
 import Heart from '../components/greetings/Heart';
+import imageCover from '../assets/image-cover.jpg';
 
 export default function Greeting() {
   return (
-    <IntroWarpper>
-      <Date>2024 04 28</Date>
-      <MainContainer>
-        <MainTit>
-          상성 <br /> & <br />
-          경민
-        </MainTit>
-        <Heart />
-        <MainSub>결혼합니다.</MainSub>
-      </MainContainer>
-      <IntroImg src={introImage} alt="인트로 이미지" />
-      <IntroDesc>
-        다섯 번째 맞이하는 따뜻한 봄날, <br />
-        부부가 되려합니다.
-      </IntroDesc>
-      <IntroDesc>
-        그 시작을 <br />
-        함께 축복해 주신다면 <br />더 없는 기쁨으로 간직하겠습니다.
-      </IntroDesc>
-      <InfoContainer>
-        <Name>이상성</Name>
-        <Symbol>・</Symbol>
-        <Name>류경민</Name>
-        <SubText>드림</SubText>
-      </InfoContainer>
-    </IntroWarpper>
+    <>
+      <Cover src={imageCover} alt="최상단 이미지" />
+      <IntroWarpper>
+        <Date>2024 04 28</Date>
+        <MainContainer>
+          <MainTit>
+            상성 <br /> & <br />
+            경민
+          </MainTit>
+          <Heart />
+          <MainSub>결혼합니다.</MainSub>
+        </MainContainer>
+        <IntroImg src={introImage} alt="인트로 이미지" />
+        <IntroDesc>
+          다섯 번째 맞이하는 따뜻한 봄날, <br />
+          부부가 되려합니다.
+        </IntroDesc>
+        <IntroDesc>
+          그 시작을 <br />
+          함께 축복해 주신다면 <br />더 없는 기쁨으로 간직하겠습니다.
+        </IntroDesc>
+        <InfoContainer>
+          <Name>이상성</Name>
+          <Symbol>・</Symbol>
+          <Name>류경민</Name>
+          <SubText>드림</SubText>
+        </InfoContainer>
+      </IntroWarpper>
+    </>
   );
 }
+
+export const Cover = styled.img`
+  vertical-align: bottom;
+  width: 100%;
+`;
 
 export const IntroWarpper = styled.div`
   position: relative;
@@ -56,7 +65,7 @@ export const Date = styled.p`
 export const IntroImg = styled.img`
   width: 100%;
   height: auto;
-  margin-top: 8rem;
+  margin-top: 9rem;
   max-width: 320px;
 
   @media (max-width: 300px) {

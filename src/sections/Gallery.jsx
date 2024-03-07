@@ -34,7 +34,6 @@ export default function Gallery() {
 
   return (
     <GalleryWrapper>
-      {/* <HeadText>우리의 순간</HeadText> */}
       <ImgContainer
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -84,7 +83,6 @@ export const HeadText = styled.p`
   font-size: 1rem;
   color: #717171;
   text-align: center;
-  /* margin: 0 0 -1rem 2rem; */
   letter-spacing: 0.2rem;
 `;
 
